@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+ {%load static %}
     <head>
+       
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,
          initial-scale=1">
+         <link rel="stylesheet" href ="{ %static'css/style.css' %}">
          <title>ROYPOSTS</title>
     </head>
 
     <body>
        <h1>hello brokies</h1>
-       <ul>
-        {% for BlogPost in posted %}
-        <ul>
-            {{ BlogPost}}
-        </ul>
-        {% endfor %}
-       </ul>
+    
+    <img src="{ % static'image/rick-morty.png'%}"alt "image" style="
+    width:120px, margin-bottom = -50px;">
+
       
     
     </body>

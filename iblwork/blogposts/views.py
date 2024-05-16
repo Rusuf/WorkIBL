@@ -7,6 +7,7 @@ from .models import BlogPost
 
 # Create your views here.
 def index(request):
+    
     context={
         "posted": BlogPost.objects.all()
     }
