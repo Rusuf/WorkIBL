@@ -11,3 +11,13 @@ class BlogPost(models.Model):
 
     def __str__(self):
         return f" {self.id} {self.title} , {self.content}"
+    
+
+class Subscriber(models.Model):
+    email = models.EmailField(unique=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    def __str__(self):
+        return self.email
+    

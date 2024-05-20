@@ -12,12 +12,20 @@
     </head>
 
     <body>
-       <h1>hello World</h1>
-    
-     <img src="{% static 'image/rick-morty.png' % }" class= "image"
-      style="width:120px; margin-bottom = -50px; ">
+       <h1>ROYPOSTS</h1>
+       <div>
+        <img src="{% static 'image/rick-morty.png' %}" class= "image"
+       style="width:120px; margin-bottom = -50px;" />
+       </div>
+       
 
-      
-    
-    </body>
+     <div class= "box">
+        <form action= "" method ="emailadd">{% csrf_token %}
+            <div class="formbox">
+                <input type="text" name="email address" placeholder="enter email address">
+                <button type="submit">subscribe</button>
+                </div>
+            </form>
+        </div>
+     </body>
 </html>
