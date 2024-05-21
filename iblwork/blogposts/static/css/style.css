@@ -1,6 +1,14 @@
 *
 {
-    background-color: gold;
+    background-color: rgb(36, 35, 33);
     color: violet;
     
+}
+.container{
+    background-color: rgb(36, 35, 33);
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: auto;
+    margin: 0 auto;
 }

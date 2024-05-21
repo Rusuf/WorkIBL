@@ -1,22 +1,31 @@
 import email
-from multiprocessing import context
 from re import I, template
+
 from django.shortcuts import render
 from django.http import HttpResponse
-
 from .forms import SubscriberForm
 
 
 # Create your views here.
 def index(request):
     template = "posted/index.html"
-    return render(request, template)
+    return render(request, template, {})
+
+def about(request):
+      if request.method == 'POST':
+            form = SubscriberForm(request.POST)
+            if form.is_valid():
+                  print("valid")
+                  form.save()
+
 
 def Subscribe(request):
-        form = SubscriberForm(request.POST)
-        template=("posted/index.html")
-        print(request.POST)
-        return render(request, "posted/subscriber.html", {'form':form})
+                   
+                  
+        form = SubscriberForm()
+        return render(request, 'posted/subscriber.html',{'form': form})
+
+
     
 
     #context={

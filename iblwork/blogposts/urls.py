@@ -4,6 +4,9 @@ from . import views
 urlpatterns = [
      path('', views.index),
      path('posted/subscriber', views.Subscribe),
+     path('subscriber',views.about ),
+
+     
      
  ]
- 
+  

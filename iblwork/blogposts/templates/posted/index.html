@@ -12,14 +12,13 @@
     </head>
 
     <body>
-       <h1>ROYPOSTS</h1>
-       <div>
+        <div class="container">
+            <h1>ROYPOSTS</h1>
         <img src="{% static 'image/rick-morty.png' %}" class= "image"
-       style="width:120px; margin-bottom = -50px;" />
-       </div>
+       style="width:180px; margin-bottom = -50px;" />
        
 
-     <div class= "box">
+     <div class= "subscribe_box">
         <form action= "" method ="emailadd">{% csrf_token %}
             <div class="formbox">
                 <input type="text" name="email address" placeholder="enter email address">
@@ -27,5 +26,9 @@
                 </div>
             </form>
         </div>
-     </body>
+ </div>
+        
+
+
+    </body>
 </html>

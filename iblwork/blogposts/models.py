@@ -13,7 +13,7 @@ class BlogPost(models.Model):
         return f" {self.id} {self.title} , {self.content}"
     
 
-class Subscriber(models.Model):
+class Subscriber(models.Model): 
     email = models.EmailField(unique=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
