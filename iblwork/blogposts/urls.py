@@ -1,12 +1,15 @@
 from django .urls import path
-from . import views
+from blogposts import views
  
 urlpatterns = [
-     path('', views.index),
-     path('posted/subscriber', views.Subscribe),
-     path('subscriber',views.about ),
-
+    path('', views.index),
+     path('posted/subscriber', views.Subscribe, name='subscribe'),
+     path('posted/base', views.Subscribe, name='base'),
+     path('posted/index', views.index, name= 'about'),
+     path('posted/index', views.index, name= 'contact'),
+     path('posted/index', views.index, name= 'home'),
      
+      
      
  ]
   

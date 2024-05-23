@@ -1,13 +1,17 @@
+import email
+from django.forms import ModelForm
+from .models import Subscriber
+from blogposts.models import models
 from django import forms
 
-from .models import Subscriber
 
 
+class SubscriberForm(ModelForm):
+    email = forms.TextInput()
+    class Meta:
+        model = Subscriber
+        fields = ('email',)
+    
 
-class SubscriberForm(forms.Form):
       
-        email = forms.EmailField(label='Email', max_length=100)
-        class meta:
-                model = Subscriber
-        
        

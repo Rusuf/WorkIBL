@@ -3,7 +3,10 @@
 
     <head>
         {% load static %}
-       
+
+        {% block content %}
+        {% csrf_token %}
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,
          initial-scale=1.0">
@@ -12,23 +15,32 @@
     </head>
 
     <body>
-        <div class="container">
-            <h1>ROYPOSTS</h1>
+        <div class="full-page">
+            <div class="navbar">
+              </div>
+              <div class="main-content">
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'subscribe' %}">Subscribe</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="content">
+        <h1><ROYPOSTS/hi>
+            <p> Welcome to ROYPOSTS, your ultimate destination for all things related to fashion, lifestyle, and entertainment. Our mission is to provide you with the latest trends,insightful articles, engaging videos, and much more to keep you informed and inspired.</p>
+    </div>
+        <div class="contained">
+            <h2>RoY</h2>
         <img src="{% static 'image/rick-morty.png' %}" class= "image"
        style="width:180px; margin-bottom = -50px;" />
        
-
-     <div class= "subscribe_box">
-        <form action= "" method ="emailadd">{% csrf_token %}
-            <div class="formbox">
-                <input type="text" name="email address" placeholder="enter email address">
-                <button type="submit">subscribe</button>
-                </div>
-            </form>
-        </div>
  </div>
         
 
 
     </body>
 </html>
+{% endblock %}

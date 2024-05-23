@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %} ROYPOSTS {% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+            <li><a href="{% url 'subscribe' %}">Subscribe</a></li>
+        </ul>
+    </nav>
+
+    {% block content %}
+   
+    {% endblock %}
+
+    <footer>
+        &copy; 2024 ROYPOSTS
+    </footer>
+</body>
+</html>
